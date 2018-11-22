@@ -3,6 +3,8 @@ package ListaMatriz;
 import java.util.Scanner;
 
 public class Ex05 {
+
+	public static void main(String[] args) {
 		public static Scanner leia = new Scanner(System.in);
 		public static void main(String[] args) {
 			//CRIAR ARRAY 4X5
