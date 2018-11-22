@@ -1,0 +1,27 @@
+package ListaMatriz;
+import java.util.Scanner;
+public class Ex06 {
+	public static Scanner leia = new Scanner(System.in);
+	public static void main(String[] args) {
+		//CRIAR ARRAY 4X5
+		int array45[][] = new int[4][5];
+		int numero;
+		for(int i = 0; i<4;i++) {
+			for(int j = 0; j<5;j++) {
+				System.out.println("Digite um numero para a linha:"+i+" coluna:"+j);
+				numero = leia.nextInt();
+				array45[i][j] = numero;
+			}
+		}
+		
+		for(int i = 0; i<4;i++) {
+			for(int j = 0; j<5;j++) {
+				System.out.println(array45[i][j]);
+				
+			}
+		}
+		
+
+	}
+
+}
