@@ -1,0 +1,51 @@
+package Baralho;
+import java.util.Random;
+
+public class Baralho {
+	// Array representando os naipes
+	private String[] naipe = { "Paus", "Ouros", "Copas", "Espadas" };
+	// Array representando os valores
+	private String[] valor = { "2", "3", "4", "5", "6", "7", "8", "9",
+	"10", "Valete", "Dama", "Rei", "Az" };
+
+	// constantes representando quantidades em cada array
+	private final int quantNaipes = naipe.length;
+	private final int quantValores = valor.length;
+	private final int quantCartas = quantNaipes * quantValores;
+
+	// Array representando o baralho de cartas
+	private String[] baralho = new String[quantCartas];
+	public void iniciaCartas() {
+	//TODO criar loop(s) para criar todas as cartas do baralho;
+	// as cartas são criadas em ordem de número/naipe;
+	// cada carta é representada por String resultante da
+	// concatenação: número + " de " + naipe.
+		int c = 0;
+		for(int i = 0; i < quantNaipes;i++) {
+			for(int j = 0; j < quantValores;j++) {
+				c++;
+				baralho[c] = valor[j]+" de "+naipe[i];
+			}
+		}
+	}
+	
+	public void imprimeCartas() {
+	//TODO criar loop para imprimir todas as cartas do baralho
+		for(int c = 1; c < quantCartas;c++) {
+			System.out.println(baralho[c]);
+		}
+	}
+
+	public void embaralhaCartas() {
+	//TODO criar loop para embaralhar as cartas do baralho
+		Random gerador = new Random();
+		int rand[] = new int[52];
+		for(int i = 0; i < 52;i++) {
+			for(int j = 0; j < 52;j++) {
+				
+			}
+			System.out.println("numero:"+i+" :"+gerador.nextInt(53));
+		}
+	}
+	
+}

@@ -1,0 +1,44 @@
+package Baralho;
+import java.util.Random;
+public class Baralhao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Baralho b = new Baralho();
+		
+		int numero = 0;
+		int controle = 0;
+		int find = 0;
+		int c, i = 0;        
+		int[] num = new int[24];        
+		Random r = new Random(); 
+
+		//contruindo o array sem repetição
+		for(i = 0; i < num.length; i++)
+		{
+			find = r.nextInt(25) + 1;
+			if ( i == 0 ) {
+				num[i] = find;
+			} else {
+				c = 0;
+				while (c < i)
+				{
+					if (num[c] == find)
+					{
+						find = r.nextInt(25) + 1;
+						c = 0;
+					} else {                   
+						c++;
+					}
+				}
+				num[i] = find;                
+			}
+		}
+
+		for(i = 0; i < num.length ; i++)
+		{
+			System.out.print(num[i] + "  ");
+		}
+	}
+	
+}

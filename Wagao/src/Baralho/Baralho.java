@@ -1,4 +1,5 @@
 package Baralho;
+import java.util.Random;
 
 public class Baralho {
 	// Array representando os naipes
@@ -19,15 +20,59 @@ public class Baralho {
 	// as cartas são criadas em ordem de número/naipe;
 	// cada carta é representada por String resultante da
 	// concatenação: número + " de " + naipe.
-		
+		int c = 0;
+		for(int i = 0; i < quantNaipes;i++) {
+			for(int j = 0; j < quantValores;j++) {
+				baralho[c] = valor[j]+" de "+naipe[i];
+				c++;
+			}
+		}
 	}
 	
 	public void imprimeCartas() {
 	//TODO criar loop para imprimir todas as cartas do baralho
+		for(int c = 0; c < quantCartas;c++) {
+			System.out.println(baralho[c]);
+		}
 	}
 
 	public void embaralhaCartas() {
 	//TODO criar loop para embaralhar as cartas do baralho
+		Random rand = new Random();
+		int con = 0;
+		int c;
+		int[] num = new int[52];
+		for(int i = 0; i <num.length; i++) {
+			con = rand.nextInt((num.length + 1));
+			// se foi o primeiro insere
+			if( i == 0) {
+				num[i] = con;
+			}else {
+				c = 0;
+				// enquanto c for menor que o i faca isso
+				while( c < i) {
+					//comparar se os numeros são iguais
+					if(num[c] == con) {
+						con = rand.nextInt((num.length + 1));
+						//recomeça
+						c = 0;
+					}else {
+						c++;
+					}
+				}
+				//apos todo o teste vc insere no array
+				num[i] = con;
+			}
+		}
+		
+		for(c = 0; c < quantCartas;c++) {
+			int numero = num[c];
+			System.out.print("numero:"+numero);
+			System.out.println("num:"+c+" "+baralho[numero]);
+		}
 	}
+	
+	
+	
 	
 }
