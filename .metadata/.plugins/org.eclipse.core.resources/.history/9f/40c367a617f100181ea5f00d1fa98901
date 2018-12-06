@@ -56,7 +56,7 @@ public class Ex05 {
 			array42[3][0] = (array45[3][0]*array52[0][0])+(array45[3][1]*array52[1][0])+(array45[3][2]*array52[2][0])+(array45[3][3]*array52[3][0])+(array45[3][4]*array52[4][0]);
 			
 			array42[3][1] = (array45[3][0]*array52[0][1])+(array45[3][1]*array52[1][1])+(array45[3][2]*array52[2][1])+(array45[3][3]*array52[3][1])+(array45[3][4]*array52[4][1]);
-			System.out.println("-----------------------MATRIZ RESULTANTE-------------------------");
+			System.out.println("-----------------------MATRIZ RESULTANTE-------------------------")
 			for (int i= 0;i<4;i++) {
 				for(int j=0;j<2;j++) {
 					System.out.print(array42[i][j]+" ");
